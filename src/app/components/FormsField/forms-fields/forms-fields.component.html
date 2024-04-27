@@ -1,0 +1,61 @@
+<div class="text-body-emphasis text-center py-2">
+    <h4>{{createEmployee ? 'User Regitseration' : 'Update Registered User'}}</h4>
+</div>
+<div class="py-3 px-2">
+    <button type="reset" (click)="resetFrom()" class="btn btn-group-sm bg-danger-subtle">Reset Form</button>
+</div>
+
+<form [formGroup]="studentForm" (ngSubmit)="onStudentSubmit()">
+<div class="grid px-3 py-5">
+<div class="row">
+    <label class="pb-3" for="parentName">Parent or GuradianName</label>
+    <div class="col pb-4">
+        <span class="form-label">
+            <input formControlName="parentFirstName" class="col-8" pInputText id="parentFirstName" />
+            <label for="username">First</label>
+        </span>
+    </div>
+    <div class="col pb-4">
+        <span class="form-label">
+            <input formControlName="parentLastName" class="col-8" pInputText id="parentLastName" />
+            <label for="userID">Last</label>
+        </span>
+    </div>
+    <div class="w-100"></div>
+    <label class="pb-3" for="studentName">Student's Name</label>
+    <div class="col pb-4">
+        <span class="form-label">
+            <input formControlName="studentFirstName" class="col-8" pInputText id="studentFirstName" />
+            <label for="userID">First</label>
+        </span>
+    </div>
+    <div class="col pb-4">
+        <span class="form-label">
+            <input formControlName="studentLastName" class="col-8" pInputText id="studentLastName" />
+            <label for="userID">Last</label>
+        </span>
+    </div>
+  </div>
+  <div class="row px-5">
+    <div class="pb-4">
+        <span class="form-label">
+            <input formControlName="studentGradeLevel" class="col-8" pInputText id="studentGradeLevel" />
+            <label for="username">Grade Lavel</label>
+        </span>
+    </div>
+    <div class="pb-4">
+        <span class="form-label">
+            <input formControlName="studentEmail" class="col-8" pInputText id="studentEmail" />
+            <label for="username">Email Address</label>
+        </span>
+    </div>
+    <div class="pb-4">
+        <span class="form-label">
+            <input formControlName="studentPresentAddress" class="col-8" pInputText id="studentPresentAddress" />
+            <label for="username">Present Address</label>
+        </span>
+    </div>
+    <button type="submit" class="btn btn-group-lg bg-primary-subtle col-8" >{{createEmployee ?  'Register' : 'Update User'}}</button>
+  </div>
+</div>
+</form>
